@@ -1,12 +1,17 @@
-# E-commerce Customer Segmentation using RFM Analysis
+# E-commerce Customer Analytics & Segmentation (SQL, Python, Excel)
 
 # Overview
-This project analyzes customer behavior in an e-commerce dataset using RFM (Recency, Frequency, Monetary) analysis.
-The goal is to segment customers based on purchasing patterns and identify high-value, loyal, and at-risk customers to support business decision-making.
+This project analyzes customer behavior and business performance in an e-commerce dataset using SQL, Python, and Excel.
+It combines exploratory data analysis (revenue trends, product performance, customer insights) with RFM (Recency, Frequency, Monetary) analysis to segment customers and identify high-value, loyal, and at-risk users.
+The project concludes with an interactive Excel dashboard for business decision-making.
 
 # Business Problem
-E-commerce businesses often struggle with understanding customer behavior and retention. Identifying high-value customers and those at risk of churn is critical for improving revenue and engagement.
-This project aims to segment customers based on purchasing behavior to support targeted marketing and retention strategies.
+E-commerce businesses often struggle with understanding customer behavior, identifying high-value users, and improving customer retention.
+This project aims to:
+- Analyze sales and customer patterns
+- Identify revenue-driving segments
+- Detect customers at risk of churn
+- Support targeted marketing strategies
 
 # Dataset Used
 Brazilian E-Commerce Public Dataset by Olist
