@@ -52,6 +52,7 @@ Customers were scored on each metric (1–5) and segmented based on their behavi
 ![Dashboard](images/dashboard.png)
 
 # Project Structure
+```
 ecommerce-data-analytics/
 │
 ├── data/
@@ -75,6 +76,7 @@ ecommerce-data-analytics/
 │   ├── recency_vs_monetary.png
 │
 ├── README.md
+```
 
 # How to run
 1. Execute SQL scripts to generate the base dataset
