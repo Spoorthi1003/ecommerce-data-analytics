@@ -1,8 +1,4 @@
 -- RFM core table
-WITH payment_per_order AS(
-SELECT order_id, SUM(payment_value) AS total_payment
-FROM olist_order_payments_dataset
-GROUP BY order_id)
 SELECT c.customer_unique_id, 
 MAX(o.order_purchase_timestamp) AS last_purchase,
 DATEDIFF('2018-08-31', MAX(o.order_purchase_timestamp)) AS recency,
