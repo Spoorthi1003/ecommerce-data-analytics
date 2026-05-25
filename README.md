@@ -76,6 +76,9 @@ ecommerce-data-analytics/
 │
 ├── python/
 │   ├── RFM_analysis.py
+|
+├── powerbi/
+│   ├── dashboard.pbix
 │
 ├── images/
 │   ├── dashboard.png
@@ -83,6 +86,7 @@ ecommerce-data-analytics/
 │   ├── revenue_by_segment.png
 │   ├── segment_distribution.png
 │   ├── recency_vs_monetary.png
+|   ├── schema.png
 │
 ├── README.md
 ```
