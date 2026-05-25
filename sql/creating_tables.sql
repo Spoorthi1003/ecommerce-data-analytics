@@ -14,15 +14,12 @@ order_delivered_customer_date TEXT,
 order_estimated_delivery_date TEXT
 );
 
-
 LOAD DATA LOCAL INFILE 'C:/Users/sua5/Desktop/CWH/ecommerce-project/olist_orders_dataset.csv'
 INTO TABLE olist_orders_dataset
 FIELDS TERMINATED BY ','
 ENCLOSED BY '"'
 LINES TERMINATED BY '\n'
 IGNORE 1 ROWS;
-
-SELECT COUNT(*) FROM olist_customers_dataset;
 
 CREATE TABLE olist_products_dataset (
 product_id VARCHAR(50),

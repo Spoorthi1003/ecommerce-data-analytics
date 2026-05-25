@@ -28,6 +28,25 @@ GROUP BY category
 ORDER BY revenue DESC
 LIMIT 10;
 
+WITH ordered_revenue_products AS(
+SELECT 
+pt.product_category_name_english AS category,
+SUM(oi.price) AS revenue,
+DENSE_RANK() OVER (ORDER BY SUM(oi.price) DESC) AS ranks
+FROM clean_orders o
+JOIN olist_order_items_dataset oi 
+    ON o.order_id = oi.order_id
+JOIN olist_products_dataset p
+    ON oi.product_id = p.product_id
+JOIN product_category_name_translation pt
+    ON pt.product_category_name = p.product_category_name
+GROUP BY category
+ORDER BY revenue DESC
+)
+SELECT category, revenue
+FROM ordered_revenue_products
+WHERE ranks <= 10;
+
 -- Average Order Value
 SELECT SUM(p.payment_value)/COUNT(DISTINCT p.order_id)
 AS avg_order_value
@@ -36,13 +55,18 @@ JOIN olist_order_payments_dataset p
 ON o.order_id = p.order_id;
 
 -- Top Customer Cities
-SELECT COUNT(DISTINCT o.order_id) AS total_orders , c.customer_city 
+WITH ranked_cities AS(
+SELECT COUNT(DISTINCT o.order_id) AS total_orders , c.customer_city ,
+DENSE_RANK() OVER (ORDER BY COUNT(DISTINCT o.order_id) DESC) AS ranks
 FROM clean_orders_table o
 JOIN olist_customers_dataset c
 ON o.customer_id = c.customer_id
 GROUP BY c.customer_city
 ORDER BY total_orders DESC
-LIMIT 10;
+)
+SELECT total_orders, customer_city
+FROM ranked_cities
+WHERE ranks <=10 ;
 
 -- Customer Spend Analysis
 SELECT c.customer_unique_id, SUM(p.payment_value) AS customer_spend
