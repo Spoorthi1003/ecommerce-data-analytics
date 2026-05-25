@@ -1,9 +1,9 @@
-# E-commerce Customer Analytics & Segmentation (SQL, Python, Excel)
+# E-commerce Customer Analytics & Segmentation (SQL, Python, Excel, Power BI)
 
 # Overview
-This project analyzes customer behavior and business performance in an e-commerce dataset using SQL, Python, and Excel.
+This project analyzes customer behavior and business performance in an e-commerce dataset using SQL, Python, Power BI and Excel.
 It combines exploratory data analysis (revenue trends, product performance, customer insights) with RFM (Recency, Frequency, Monetary) analysis to segment customers and identify high-value, loyal, and at-risk users.
-The project concludes with an interactive Excel dashboard for business decision-making.
+The project concludes with an interactive Power BI dashboard for business decision-making.
 
 # Business Problem
 E-commerce businesses often struggle with understanding customer behavior, identifying high-value users, and improving customer retention.
@@ -21,6 +21,7 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 - SQL (data extraction & transformation)
 - Python (Pandas, Matplotlib, Seaborn)
 - Excel (dashboard & visualization)
+- Power BI (final dashboard for presentation)
 
 # Process
 1. Cleaned and filtered transactional data using SQL
@@ -28,6 +29,7 @@ https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 3. Performed customer segmentation using Python
 4. Built visualizations to analyze customer behavior
 5. Developed an interactive Excel dashboard using Pivot Tables and Slicers
+6. Developed an interactive Power BI dashboard to present business insights.
 
 # RFM Analysis
 RFM stands for:
@@ -70,12 +72,14 @@ ecommerce-data-analytics/
 |   |__ creating_index.sql
 |   |__ data_validation.sql
 |   |__ data_exploration.sql
+|   |__ star_schema.sql
 │
 ├── python/
 │   ├── RFM_analysis.py
 │
 ├── images/
 │   ├── dashboard.png
+|   ├── dashboard_excel.png
 │   ├── revenue_by_segment.png
 │   ├── segment_distribution.png
 │   ├── recency_vs_monetary.png
@@ -86,4 +90,4 @@ ecommerce-data-analytics/
 # How to run
 1. Execute SQL scripts to generate the base dataset
 2. Run the Python notebook to perform RFM analysis
-3. Open the Excel file to explore the dashboard
+3. Open the Excel and Power BI to explore the dashboard 
